@@ -1,0 +1,393 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    .container {
+        max-width: 960px
+    }
+}
+
+@media only screen and (min-width : 993px) {
+    .header-nav {
+        display: block !important;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .container {
+        max-width: 735px
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .hide-scroll {
+        overflow: hidden;
+    }
+
+    .toggle-menu {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .humburger {
+        text-decoration: none;
+        width: 50px;
+        height: 30px;
+        display: block;
+        position: relative;
+        outline: none;
+        z-index: 101;
+    }
+
+    .humburger span,
+    .humburger span::before,
+    .humburger span::after {
+        background-color: #050505;
+        width: 40px;
+        height: 2px;
+        border-radius: 3px;
+        transition: all .25s ease;
+    }
+
+    .humburger span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .humburger span::before,
+    .humburger span::after {
+        content: '';
+        position: absolute;
+    }
+
+    .humburger span::before {
+        transform: translateY(10px);
+    }
+
+    .humburger span::after {
+        transform: translateY(-10px);
+    }
+
+    .humburger_active .header-nav {
+        display: block;
+    }
+
+    .humburger_active span {
+        height: 0;
+    }
+
+    .humburger_active span::before {
+        transform: rotate(-45deg);
+    }
+
+    .humburger_active span::after {
+        transform: rotate(45deg);
+    }
+
+    .header-main {
+        padding-right: 0;
+    }
+
+    .header-nav {
+        background: white;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        padding-top: 75px;
+        padding: 70px 30px 20px;
+        display: none;
+    }
+
+    .header-nav__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-nav__item {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .header-nav__link {
+        font-size: 20px;
+
+    }
+
+    .skills {
+        background-image: none;
+        padding: 100px 0;
+        height: auto;
+    }
+
+    .advantages-list {
+        flex-wrap: wrap;
+    }
+
+    .advantages__item {
+        width: 50%;
+        margin-bottom: 40px;
+    }
+
+    .process__video {
+        height: 450px;
+    }
+
+    .feedback {
+        padding: 70px 0;
+    }
+
+    .footer__left {
+        margin-right: 40px;
+    }
+
+}
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .container {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .btn {
+        padding: 15px 35px;
+    }
+
+    .header {
+        min-height: 625px;
+    }
+
+    .header-main {
+        //display: block;
+        padding-top: 125px;
+    }
+
+    .header-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .header-title {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .header-text {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+    .about,
+    .advantages,
+    .process,
+    .services,
+    .feedback,
+    .footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+
+    .about {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .about__title {
+        margin-bottom: 10px;
+    }
+
+    .about__text {
+        font-size: 14px;
+        margin: 0 auto 35px;
+    }
+
+    .skills {
+        padding: 70px 0 80px;
+        height: auto;
+    }
+
+    .skills__box {
+        max-width: 100%;
+    }
+
+    .skills__title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .advantages {
+        padding-bottom: 10px;
+    }
+
+    .advantages__item {
+        margin-bottom: 40px;
+    }
+
+    .advantage__wrap-inner {
+        flex-basis: 156px;
+    }
+
+    .advantage__number {
+        font-size: 16px;
+    }
+
+    .advantage__text {
+        font-size: 10px;
+    }
+
+    .gallery-list__item {
+        width: 50%;
+    }
+
+    .process__video {
+        height: 380px;
+    }
+
+    .form__row {
+        display: block;
+    }
+
+    .form__row>.form__input {
+        width: 100%;
+    }
+
+    .form__row>.form__input:first-child {
+        margin-right: 0;
+    }
+
+    .services {
+        padding-bottom: 10px;
+    }
+
+    .services__item {
+        width: 50%;
+    }
+
+    .service__img {
+        margin-bottom: 15px;
+    }
+
+    .service__name {
+        margin-bottom: 11px;
+    }
+
+    .service__text {
+        max-width: 100%;
+        margin: 0 auto 50px;
+    }
+
+    .reviews {
+        padding-top: 100px;
+    }
+
+    .slider-text {
+        font-size: 20px;
+        margin-bottom: 23px;
+    }
+
+    .slider-author {
+        margin-bottom: 45px;
+    }
+
+    .slick-dots li button::before {
+        width: 9px;
+        height: 9px;
+    }
+
+    .slick-dots li.slick-active button::before {
+        width: 15px;
+        height: 15px;
+        margin-top: -3px;
+        margin-left: -3px;
+    }
+
+    .footer__wrap {
+        display: block;
+    }
+
+    .footer__left {
+        max-width: 100%;
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .footer__title {
+        margin-bottom: 10px;
+    }
+
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 576px) {
+    .footer__list:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    .advantages__item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .advantage__img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .advantage__wrap-inner {
+        flex-basis: auto;
+    }
+
+    .advantage__number {
+        line-height: 20px;
+    }
+
+    .process__video {
+        height: 315px;
+    }
+
+
+}
+
+
+@media only screen and (max-width : 500px) {
+    .advantages__item {
+        width: 100%;
+    }
+
+    .process__video {
+        height: 230px;
+    }
+
+    .services__item {
+        width: 100%;
+    }
+
+    .footer__right {
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__contacts,
+    .footer__menu {
+        margin-bottom: 35px;
+    }
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {}
